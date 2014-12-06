@@ -1,0 +1,14 @@
+check process hadoop-hdfs-namenode
+  with pidfile "/var/run/hadoop-hdfs/hadoop-hdfs-namenode.pid"
+  start program = "/etc/init.d/hadoop-hdfs-namenode start"
+  stop program = "/etc/init.d/hadoop-hdfs-namenode stop"
+  
+check process hbase-master
+  with pidfile "/var/run/hbase/hbase-hbase-master.pid"
+  start program = "/etc/init.d/hbase-master start"
+  stop program = "/etc/init.d/hbase-master stop"
+  
+check process hbase-thrift
+  with pidfile "/var/run/hbase/hbase-hbase-thrift.pid"
+  start program = "/etc/init.d/hbase-thrift start"
+  stop program = "/etc/init.d/hbase-thrift stop"

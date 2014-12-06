@@ -1,0 +1,16 @@
+Host *
+  StrictHostKeyChecking no
+  IdentityFile /home/ubuntu/.ssh/hadoop_id_rsa
+  User ubuntu
+
+Host *.augnodev.com
+  StrictHostKeyChecking no
+  IdentityFile /home/ubuntu/.ssh/hadoop_id_rsa
+  User ubuntu
+  
+Host *.us-west-1.compute.amazonaws.com
+  StrictHostKeyChecking no
+  IdentityFile /home/ubuntu/.ssh/aws_development_west.pem
+  User ubuntu
+  
+  
