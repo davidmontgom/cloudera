@@ -1,4 +1,6 @@
 #http://www.cloudera.com/content/cloudera-content/cloudera-docs/CDH5/5.0/CDH5-Installation-Guide/cdh5ig_cdh5_install.html
+
+
 bash "cloudera" do
 user "root"
 code <<-EOH
@@ -10,4 +12,9 @@ code <<-EOH
 EOH
 action :run
 not_if {File.exists?("/etc/apt/sources.list.d/cloudera.list")}
+end
+
+cookbook_file "/etc/apt/preferences.d/cloudera.pref" do
+  source "cloudera.pref"
+  mode 00744
 end
